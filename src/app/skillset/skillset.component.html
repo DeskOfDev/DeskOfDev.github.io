@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="page-top-cover" style="background-image: url('assets/images/hero_1.jpg');">
+    <div class="height-parent mid-cen-parent">
+        <div class="container text-center content-top-cover">
+            <h1 class="mb-4 wow fadeInDown">Skill Set</h1>
+            <h5 class="mb-4 wow fadeInUp">| Look Over | Contact Us to Serve you |</h5>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" *ngFor="let set of skillset; let i = index" [ngClass]="{'back-secondary': (i%2)==1 }">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-12 my-5 text-center">
+                <h3 class="wow fadeInDown">{{set.name}}</h3>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let skill of set.skills">
+                <div class="my-3 wow fadeInUp">
+                    <div class="flexy">
+                        <label>{{skill.name}}</label>
+                        <span class="spacer"></span>
+                        <label>{{skill.per}}%</label>
+                    </div>
+                    <mat-progress-bar mode="determinate" value="{{skill.per}}"></mat-progress-bar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footbar></app-footbar>

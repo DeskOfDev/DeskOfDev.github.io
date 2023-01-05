@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="page-top-cover" style="background-image: url('assets/images/main.jpg');">
+    <div class="height-parent mid-cen-parent">
+        <div class="container text-center content-top-cover">
+            <h1 class="mb-4 wow fadeInDown">DeskOfDev Portfolio</h1>
+            <h5 class="mb-4">Some of the things from our desk !</h5>
+            <button class="px-5 py-2 wow fadeInUp" mat-flat-button [routerLink]="['/contact']">Hire Us</button>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-12 text-center py-5">
+                <h1 class="wow fadeInDown">Our Works</h1>
+            </div>
+            <div class="col-md-4 col-sm-12 my-3" *ngFor="let work of works">
+                <div class="text-center card-works wow fadeInUp" [ngStyle]="{'background-image': 'url(' + work.thumbnail + ')'}">
+                    <div class="mid-cen-parent height-parent">
+                        <h5>{{work.title}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footbar></app-footbar>

@@ -1,0 +1,33 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row id="navbar-row" class="wow fadeInDown">
+        <button mat-button [routerLink]="['/']">DeskOfDev</button>
+        <span class="spacer"></span>
+        <div class="d-none d-sm-block">
+            <a href="#about">
+                <button mat-button>About</button>
+            </a>
+            <a href="#services">
+                <button mat-button>Services</button>
+            </a>
+            <a href="#works">
+                <button mat-button>Our Works</button>
+            </a>
+        </div>
+        <div class="d-xs-block d-sm-none">
+            <button mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <a mat-button href="#about" class="width-full">
+                    About
+                </a>
+                <a mat-button href="#services" class="width-full">
+                    Services
+                </a>
+                <a mat-button href="#works" class="width-full">
+                    Our Works
+                </a>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

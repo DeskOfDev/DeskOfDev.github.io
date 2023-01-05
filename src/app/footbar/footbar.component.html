@@ -1,0 +1,43 @@
+<div class="container-fluid back-secondary">
+    <div class="container py-5">
+        <div class="row py-5">
+            <div class="col-sm-12 col-md-4">
+                <h1>
+                    <span>Desk</span>
+                    <span>Of</span>
+                    <span>Dev</span>
+                </h1>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+                <p class="mb-4">Quick Links</p>
+                <ul class="list-unstyled">
+                    <li class="my-3">
+                        <a [routerLink]="['/about']">About Us</a>
+                    </li>
+                    <li class="my-3">
+                        <a [routerLink]="['/termsofservice']">Terms of Service</a>
+                    </li>
+                    <li class="my-3">
+                        <a [routerLink]="['/privacy']">Privacy</a>
+                    </li>
+                    <li class="my-3">
+                        <a [routerLink]="['/contact']">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+                <p class="mb-4">Connect</p>
+                <button mat-fab class="btn-fawsm" color="primary">
+                    <fa-icon [icon]="['fab', 'facebook-f']"></fa-icon>
+                </button>
+                <p class="my-4">For Services</p>
+                <button mat-flat-button [routerLink]="['/contact']" color="primary">
+                    Hire Us
+                </button>
+            </div>
+        </div>
+        <div class="row py-5">
+            <p class="foot-text">Copyright ©2020 DeskOfDev All rights reserved</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+<app-navbar></app-navbar>
+<div class="page-top-cover" style="background-image: url('assets/images/main.jpg');">
+    <div class="height-parent mid-cen-parent">
+        <div class="container text-center content-top-cover">
+            <h1 class="mb-4 wow fadeInDown">About DeskOfDev</h1>
+            <h5 class="mb-4">A lot, from a desk !</h5>
+            <button class="px-5 py-2 wow fadeInUp" mat-flat-button [routerLink]="['/contact']">Contact Us</button>
+        </div>
+    </div>
+</div>
+
+<!--
+    ABOUT US
+    Expreties and skills
+-->
+<div class="container py-5">
+    <div class="row py-5">
+        <div class="col-md-4 col-sm-12 mid-cen-parent">
+            <div class="wow fadeInLeft my-5">
+                <h2>About Us</h2>
+                <p>
+                    DeskOfDev is a team of 3 Software Developers serving technology services in multiple platform.
+                </p>
+                <button mat-raised-button color="primary">Our Works</button>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <img src="assets/images/about_1.jpg" class="img-fluid wow fadeInUp">
+        </div>
+        <div class="col-md-4 col-sm-12 mid-cen-parent">
+            <div class="wow fadeInRight my-5">
+                <h2>Expreties and skills</h2>
+                <div class="my-3">
+                    <div class="flexy">
+                        <label>Angular</label>
+                        <span class="spacer"></span>
+                        <label>75%</label>
+                    </div>
+                    <mat-progress-bar mode="determinate" value="75"></mat-progress-bar>
+                </div>
+                <div class="my-3">
+                    <div class="flexy">
+                        <label>C#</label>
+                        <span class="spacer"></span>
+                        <label>80%</label>
+                    </div>
+                    <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                </div>
+                <div class="my-3">
+                    <div class="flexy">
+                        <label>Python</label>
+                        <span class="spacer"></span>
+                        <label>78%</label>
+                    </div>
+                    <mat-progress-bar mode="determinate" value="78"></mat-progress-bar>
+                </div>
+                <div class="my-3">
+                    <div class="flexy">
+                        <label>Graphic Designing</label>
+                        <span class="spacer"></span>
+                        <label>90%</label>
+                    </div>
+                    <mat-progress-bar mode="determinate" value="90"></mat-progress-bar>
+                </div>
+                <button mat-button color="primary" [routerLink]="['/skillset']">View All</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+    Portfolio Counts
+-->
+<div class="container-fluid back-secondary">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col py-5" *ngFor="let pc of portcount">
+                <div class="d-flex align-items-center port-count">
+                    <div>
+                        <mat-icon class="wow swing">{{pc.icon}}</mat-icon>
+                    </div>
+                    <div class="ml-2 wow fadeInRight">
+                        <label>{{pc.count}}<br />
+                            {{pc.title}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+    Our team
+-->
+<div class="container">
+    <div class="row py-5">
+        <div class="col-12 text-center py-5">
+            <h1 class="wow fadeInDown">Our Team</h1>
+        </div>
+        <div class="col" *ngFor="let mem of team">
+            <div class="testimonials">
+                <div>
+                    <img class="avatar wow fadeInUp" src="{{mem.avatar}}">
+                </div>
+                <p class="lines wow fadeInUp">{{mem.lines}}</p>
+                <p class="name wow fadeInUp">— {{mem.username}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footbar></app-footbar>
